@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'sudoku_solver_rust'",
+            "program": "${workspaceFolder}/sudoku_solver_rust/target/debug/sudoku_solver_rust",
+            "args": ["${workspaceFolder}/sudoku_solver_rust/sudokus/empty_sudoku_new.txt"],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "cargo build"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+	"build": {
+		"context": "..",
+		"dockerfile": "../Dockerfile",
+		"target": "base"
+	},
+	"containerUser": "root",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"1YiB.rust-bundle",
+				"rust-lang.rust-analyzer",
+				"ms-azuretools.vscode-docker",
+				"GitHub.copilot-chat",
+				"GitHub.copilot",
+				"vadimcn.vscode-lldb"
+			]
+		}
+	},
+	
+	"runArgs": [
+		//"--network=host" // activate this if you want to use the node on the hostnetwork
+	],
+	"remoteEnv": {
+		"DISPLAY": "172.17.0.1:0"
+		//"FASTRTPS_DEFAULT_PROFILES_FILE": "${containerWorkspaceFolder}/.devcontainer/dds-super-client-profile.xml" // activate this if you use a discovery server
+	}
+}
